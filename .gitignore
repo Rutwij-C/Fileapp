@@ -1,0 +1,15 @@
+# Ignore Gradle and build files
+/fileapp/build/
+/fileapp/.gradle/
+/fileapp/*.jar
+
+# Ignore Node modules and build files
+/fileapp-ui/node_modules/
+/fileapp-ui/build/
+
+# General ignores
+*.log
+*.iml
+.idea/
+.vscode/
+.DS_Store
