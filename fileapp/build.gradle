@@ -14,7 +14,7 @@ java {
 }
 
 springBoot {
-	mainClassName = 'com.intuit.fileapp.FileappApplication'
+	mainClass = 'com.intuit.fileapp.FileappApplication'
 }
 
 configurations {
