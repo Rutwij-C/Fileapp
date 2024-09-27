@@ -53,7 +53,7 @@ public class S3Service {
             HeadObjectResponse response = s3Client.headObject(request);
 
             // Capture user details from OIDC session
-            String username = user.getName();
+            String username = user.getFullName();
             String email = user.getEmail();
 
             // Save the audit log in the database
