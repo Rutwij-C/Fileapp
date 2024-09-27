@@ -19,11 +19,11 @@ public class S3Service {
 
     private final S3Client s3Client;
 
-    @Autowired
     private AuditLogRepository auditLogRepository;
 
-    public S3Service(S3Client s3Client) {
+    public S3Service(S3Client s3Client, AuditLogRepository auditLogRepository) {
         this.s3Client = s3Client;
+        this.auditLogRepository = auditLogRepository;
     }
 
     public String createBucket(String bucketName) {
@@ -36,7 +36,7 @@ public class S3Service {
             return "Bucket created successfully: " + createBucketResponse.location();
         } catch (S3Exception e) {
             e.printStackTrace();
-            return "Failed to create bucket: " + e.awsErrorDetails().errorMessage();
+            return "Failed to create bucket: " + e.getMessage();
         }
     }
 
