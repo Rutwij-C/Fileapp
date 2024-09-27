@@ -7,12 +7,12 @@ const Login = () => {
 
   const handleLogin = () => {
     // Redirect to the OAuth2 login endpoint on the backend
-    window.location.href = "http://54.176.244.51:8080/oauth2/authorization/google";  // Replace with your OAuth2 provider if needed
+    window.location.href = "http://api.fileapp.click/oauth2/authorization/google";  // Replace with your OAuth2 provider if needed
   };
 
   useEffect(() => {
     // Optionally, check if the user is already logged in by making a request to your backend (e.g., a user info endpoint)
-    axios.get('http://54.176.244.51:8080/api/userinfo', { withCredentials: true })
+    axios.get('http://api.fileapp.click/api/userinfo', { withCredentials: true })
       .then(response => {
         // If the user is already logged in, redirect them to the /metadata page
         if (response.status === 200) {
