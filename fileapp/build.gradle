@@ -13,6 +13,10 @@ java {
 	}
 }
 
+springBoot {
+	mainClassName = 'com.intuit.fileapp.FileappApplication'
+}
+
 configurations {
 	compileOnly {
 		extendsFrom annotationProcessor
