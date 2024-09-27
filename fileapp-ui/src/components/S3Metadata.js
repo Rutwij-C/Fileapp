@@ -13,7 +13,7 @@ const S3Metadata = () => {
 
   const fetchMetadata = async () => {
     try {
-      const response = await axios.get(`http://localhost:8080/api/object_metadata/${objectName}`, {
+      const response = await axios.get(`http://54.176.244.51:8080/api/object_metadata/${objectName}`, {
         withCredentials: true, // To ensure cookies/tokens are sent with the request
       });
       setMetadata(response.data);
@@ -25,7 +25,7 @@ const S3Metadata = () => {
   };
 
   useEffect(() => {
-    axios.get('http://localhost:8080/api/userinfo', { withCredentials: true })
+    axios.get('http://54.176.244.51:8080/api/userinfo', { withCredentials: true })
       .then(response => {
         setUserInfo(response.data);  // Set the user info state
       })
